@@ -6,6 +6,8 @@ require "foodie_ath/version"
 Gem::Specification.new do |spec|
   spec.name          = "foodie_ath"
   spec.version       = FoodieAth::VERSION
+  spec.version       = "#{spec.version}.#{ENV['TRAVIS_BUILD_NUMBER']}" \
+                          if ENV['TRAVIS'] && FoodieAth::VERSION.include?('.pre')
   spec.authors       = ["arvindth"]
   spec.email         = ["arvth-git@yahoo.com"]
 
