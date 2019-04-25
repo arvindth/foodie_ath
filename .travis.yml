@@ -1,5 +1,13 @@
 sudo: false
 language: ruby
 rvm:
-  - 2.5.3
+- 2.5.3
 before_install: gem install bundler -v 1.16.2
+deploy:
+  provider: rubygems
+  api_key:
+    secure: VvkoTA5KykQRxRKB2mtXjWzqMOFXz0viiqddSxv/1N0+TexvS7vN19fcYIik18sygoNAulGt2ZsImUJ4Iti+1sBzQDzJeUfDsnWDwVLakY+oKFCxqhng5gCewpg2bNeqGU/Sx+jv7ktPEp95Ezo+D9y8WKgMfDpUmDrEYscqIUclKMhj17KSjXXYn4g0CTkGmYnpI8KoD9/baUzPj3q/GKmY7gIjC/mmnwCz6+CP9ucxNeuSzX+RnlenJB9Zo4QrYP4cLs/BhSncRI68G1ByztJjqmgq/9RMIYBzI0AeoZCDnUpLogX9OR4hlkUvfOgfB1fZoT7gprL71DXw+rPJdYZemFmde6Ev2Y+9H+kJKAB70ZlfWveocbXqGB45bwMx8xy0duGUHJV8JltMsU3XzvHR9pvULab2Z4RZpKW7q8z/kziYWXKcJXpRMbj8PSLlKwCAZre+VD/AfClc7Vra1oYOCOVmD/ZLXlbLYHgUOBkWbwOkpQQeNIFIWCXX+M0BtcO0YIOUwtAZe4NW6FDAQf8fzLv0NVTQL1bkETROIMR0h0seeWV8JCRAkFaJTuKbcafaiFP7pT4E6XA0OuPInmZfs/vtLAR+/JfbH/MwN6tFz8QPzJ84nVNZZL6DGH/8L23kVyXqhcgBJavXNgh4InlVcwTVKZCqfQkJcdVkbPA=
+  gem: foodie_ath
+  on:
+    tags: true
+    repo: arvindth/foodie_ath
